@@ -60,7 +60,7 @@ window.onload = function() {
         () => {
             const options = ['amazing', 'awesome', 'beautiful'];
             const option = pick(options);
-            return `Do you know that you're ${option}`;
+            return `Do you know that you're ${option}?`;
         },
         () => {
             const options = [
