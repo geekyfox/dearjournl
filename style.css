@@ -1,0 +1,95 @@
+
+body {
+	background-color: white;
+	font-family: Alegreya;
+	font-size: 16pt;
+}
+
+div.cookie-banner {
+	position: absolute;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+	left: 0;
+	right: 0;
+	border: 1px solid gray;
+	border-radius: 1em;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+div.main-pane {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 50%;
+	height: fit-content;
+}
+
+div.question {
+	text-align: center;
+	font-size: 150%;
+	margin-top: 24pt;
+	margin-bottom: 24pt;
+}
+
+div.action {
+	text-align: right;
+}
+
+div.header a {
+    text-decoration: none;
+}
+
+div.action a {
+    text-decoration: none;
+}
+
+div.cookie-banner a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+div.qa {
+    margin-left: 25%;
+    width: 50%;
+}
+
+div.header {
+    font-size: 150%;
+    font-weight: bold;
+    margin-bottom: 12pt;
+    margin-top: 36pt;
+}
+
+div.big-header {
+    font-size: 250%;
+    font-weight: bold;
+    margin-bottom: 12pt;
+    margin-top: 36pt;
+}
+
+div.answer {
+    margin-bottom: 12pt;
+    margin-left: 5%;
+}
+
