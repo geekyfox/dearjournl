@@ -53,6 +53,19 @@ div.action a {
     text-decoration: none;
 }
 
+div.action.disabled a {
+    text-decoration: line-through;
+    color: gray;
+}
+
+div.action span.chill {
+    display: none;
+}
+
+div.action.disabled span.chill {
+    display: inline;
+}
+
 div.cookie-banner a {
     text-decoration: none;
 }

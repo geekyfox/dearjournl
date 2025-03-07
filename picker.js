@@ -90,10 +90,13 @@ window.onload = function() {
             ];
             const option = pick(options);
             return `If you were ${option}, how would that affect your life?`;
-        }
+        },
+        "Did you try to switch it off and on again?",
+        "What did you realistically expect? What you didn't expect, really?",
     ];
 
-    let previous = '';
+    let previous = [];
+    let enabled = true;
 
     const refresh = () => {
         let next = '';
@@ -104,15 +107,44 @@ window.onload = function() {
             } else {
                 next = q;
             }
-        } while (previous === next);
+        } while (previous.includes(next));
 
         document.getElementById('question').innerHTML = next;
-        previous = next;
+        previous.push(next);
+
+        if (previous.length >= 3) {
+            disable();
+        }
+
+    };
+
+    const disable = () => {
+        while (previous.length > 6) {
+            previous.shift();
+        }
+
+        const extra = previous.length - 2;
+
+        if (extra <= 0) {
+            return;
+        }
+
+        let delay = extra * 10000;
+
+        enabled = false;
+
+        document.getElementById('action').classList.add('disabled');
+        setTimeout(() => {
+            enabled = true;
+            document.getElementById('action').classList.remove('disabled');
+        }, delay);
     };
         
     document.getElementById('refresh').onclick = (evt) => {
         evt.preventDefault();
-        refresh();
+        if (enabled) {
+            refresh();
+        }
     };
     refresh();
 }
