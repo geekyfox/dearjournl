@@ -74,8 +74,7 @@ window.onload = function() {
             const banks = [
                 ['forest', 'seashore', 'mountains', 'rivers'],
                 ['rain', 'snow', 'sunshine', 'wind'],
-                ['chocolate', 'pizza', 'sushi', 'paella'],
-                ['oranges', 'apples', 'bananas', 'pears']
+                ['chocolate', 'pizza', 'sushi', 'paella', 'oranges', 'apples', 'bananas', 'pears'],
             ];
             let [first, second] = pickTwo(banks);
             first = pick(first);
